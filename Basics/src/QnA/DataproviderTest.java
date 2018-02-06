@@ -1,9 +1,15 @@
 package QnA;
 
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class DataproviderTest {
+	
+	@Test(dataProvider="data")
+	public void testCaseone(String str, Integer i){
+		System.out.println("Argument 1 - String " + str + "Argument 2 - Integer " +i);
+	}
 
 	@DataProvider(name="data")
 	public Object[][] getData(){
@@ -22,10 +28,7 @@ public class DataproviderTest {
 		return obj;
 	}
 	
-	@Test(dataProvider="data")
-	public void testCaseone(String str, Integer i){
-		System.out.println("Argument 1 - String " + str + "Argument 2 - Integer " +i);
-	}
+	
 	
 	//@Test
 /*	
@@ -56,6 +59,24 @@ public class DataproviderTest {
 		    @Before - Before Test 
 		    @After - After test
 		    
+		    @Test(invocationCount=10)
+		    public void exam(){
+		       // it repeates this method 10 times
+		    }
+		    
+		    @Test(expectedException=NumberFormatException.class)
+		    public void exam(){
+		    // we are expecting numberformationexception so continue ,,, no fail case
+		    }
+		    @Test(invocationTimeout=<timeperiod>)
+		    
+		    @Parameters({"browser","env"})
+			public void pageTitleTest(String browser, String env){
+		
+			System.out.println("browser :  "+browser);
+			System.out.println("env :  "+env);
+			}
+		    
 		    <?xml>
 		    <suite name ="name">
 		    
@@ -74,6 +95,20 @@ public class DataproviderTest {
 		     </test>
 		     
 		     </suite>
+		     
+		     
+		     Different TestNG asserts
+		     
+		    assertEqual(String actual, String Expect);
+		    assertEqual(String actual, String Expect, String message);
+		    assertEquals(Boolean actual, Boolean expected);
+		    assertTrue(conditio);
+		    assertTrue(condition, message);
+		    assertFalse(condition)
+		    assertFalse(condition, message)
+		    
+		    // if softassert is pass/fail it will continue to next step.
+		     * if hard assert is fail it will terminate test case execution
 
 *******************************************************************
 

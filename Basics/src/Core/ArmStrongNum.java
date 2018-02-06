@@ -6,6 +6,7 @@ public class ArmStrongNum {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		// 371 = 3*3+7*3+1*3
 		System.out.println("Enter the 3 digit number");
 		Scanner in = new Scanner(System.in);
 		int arm = in.nextInt();

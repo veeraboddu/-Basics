@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -82,6 +83,20 @@ public class Practice_3 {
 		// Remove duplicate word
 		   removeDuplicatword();
 		   commonChars();
+		   
+		   primeNum1_100();
+		   combineTwoArrays();
+		//   array 1 = [2,4,7]
+			//	   array 2 = [1,10]
+
+				//   Give me an array that is combination of array1, array2 i.e. final_array=[1,2,4,7,10]  which is sorted and no duplicates.
+		   
+		   highestSecond();
+		  
+		   //sort list of array elements in both Asce and Decending order
+		   sortAsceDece();
+		   
+		   LinkedListInsert();
 	}
 	
 	public static void palindrome(){
@@ -163,6 +178,17 @@ public class Practice_3 {
 		// By using arry of sort method
 		Arrays.sort(arr);
 		
+		System.out.println("Ascending Order int element");
+		for(int i:arr){
+			System.out.println(i);
+		}
+		
+		Arrays.sort(arr);
+		System.out.println("Decending Order int element");
+		for(int j=arr.length-1;j>=0;j--){
+			System.out.println(arr[j]);
+		}
+		
 		// bublle sort
 		/*for(int i=0;i<arr.length;i++){
 			for(int j=0;j<arr.length;j++){
@@ -186,6 +212,9 @@ public class Practice_3 {
 		for(int i=0;i<arr.length;i++){
 			System.out.println(arr[i]);
 		}
+		
+	
+		
 	}
 	
 	public static void randomNumberGeneration(){
@@ -265,10 +294,10 @@ public class Practice_3 {
     	l2.add("3");
     	l2.add("4");
     	l2.add("5");
-    	l2.remove(4);
+    	//l2.remove(4);
     	
     	l2.removeAll(l1);
-    	System.out.println(l2);
+    	System.out.println("Difference betwee two lists:"+l2);
     	
     }
 	
@@ -513,7 +542,7 @@ public class Practice_3 {
      
      public static void commonChars(){
     	 
-    	 String in1= "aabbccddaaeeza";
+    	 String in1= "aabbccddaaeeqqqza";
     	 String in2= "abbbaacccaaaaa";
     	 List<Character> l1= new ArrayList<>();
     	 List<Character> l2= new ArrayList<>();
@@ -536,4 +565,109 @@ public class Practice_3 {
     	 
 
      }
+     
+     public static void primeNum1_100(){
+    	 String primenum = "";
+    	 for(int i = 1;i<100; i++){
+    		 int count =0;
+    		 for(int j =i; j >=1;j--){
+    			 
+    			 if( i % j == 0){
+    				 count = count +1;
+    			 }
+    		 }
+    		 if (count ==2 ){
+    			 primenum = primenum+ " " +i;
+    		 }
+    	 }
+    	 System.out.println("Prime Numbers :"+primenum);
+    	 
+     }
+     
+     public static void combineTwoArrays(){
+    	 
+    	 Integer ary1[]={2,4,7};
+    	  Integer ary2[]={1,10};
+    	  List<Integer> l1 = new ArrayList<Integer>(ary1.length+ary2.length);
+    	  Collections.addAll(l1, ary1);
+    	  Collections.addAll(l1, ary2);
+    	  
+    	  System.out.println(l1);
+    	//  Iterator<Integer> it = l1.iterator();
+    	  for (Integer l:l1){
+    		  System.out.println(l);
+    	  }
+    	  //----------------------------------------------
+    	  String stary1[] = {"Meghana","Sunitha"};
+    	  String stary2[] = {"Murthy"};
+    	  
+    	  List<String> stList = new ArrayList<>();
+    	  Collections.addAll(stList, stary1);
+    	  Collections.addAll(stList, stary2);
+    	  
+    	  System.out.println(stList);
+    	  for(String st:stList){
+    		  System.out.println(st);
+    	  }      	  
+     }
+     
+     public static void highestSecond(){
+    	 int first_high=0;
+    	 int second_high=0;
+    	 int a[] ={1,4,16,37,8,9,3,22,77};
+    	 
+    	 for(int i=0;i<a.length;i++){
+    		 
+    		 if(a[i]>first_high){
+    			 second_high = first_high;
+    			 first_high=a[i];
+    		 }
+    	 }
+    	 
+    	 System.out.println("First high: "+first_high+" "+"Second high "+second_high);
+     }
+     
+     
+     public static void sortAsceDece(){
+    	 
+    	 List<String> l1 = new ArrayList<String>();
+    	 l1.add("aa");
+    	 l1.add("cc");
+    	 l1.add("dd");
+    	 l1.add("zz");
+    	 l1.add("xx");
+    	 l1.add("yy");
+    	 
+    	 Collections.sort(l1);
+    	 System.out.println("Ascending Order");
+    	 for(String st :l1){
+    		 System.out.println(st);
+    	 }
+    	 
+    	 Collections.sort(l1,Collections.reverseOrder());
+    	 System.out.println("Decending Order");
+    	 for(String st :l1){
+    		 System.out.println(st);
+    	 }
+    		
+     }
+     
+     public static void LinkedListInsert(){
+    	 
+    	 List<Integer> l1= new LinkedList<>();
+    	 l1.add(10);
+    	 l1.add(20);
+    	 l1.add(30);
+    	 l1.add(40);
+    	 
+    	 // insert the first index postion
+    	 l1.add(0,5);
+    	 
+    	 System.out.println("Linkedlist Insertion el");
+    	 for(Integer i:l1){
+    		 System.out.println(i);
+    	 }
+     }
 }
+
+

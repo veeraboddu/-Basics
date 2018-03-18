@@ -82,6 +82,9 @@ public class Practice_1 {
 	public static void bubbleSort(){
 		
 		int a[]={90,34,56,76,11,22,44,666,99},temp;
+		
+		String st="murthy";
+		String st1="murthy";
 		for(int i=0;i<a.length;i++){
 			for (int j=0;j<a.length;j++){
 				if(a[i]<a[j]){

@@ -8,6 +8,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
+import javax.swing.plaf.synth.SynthSeparatorUI;
+
 public class Practice_2 {
 
 	public static void main(String arg[]){
@@ -62,6 +64,8 @@ public class Practice_2 {
 		repearCharGivenString();
 		
 		commonValues();
+		
+		CheckSum();
 	}
 	
 	public static void missingNumber(){
@@ -315,4 +319,19 @@ public class Practice_2 {
 	 }
 	}
 	
+	public static void CheckSum(){
+		
+		int[] nums = {2, 7, 11, 2};
+		int target = 9;
+		
+		System.out.println(" Check the sum ");
+		for(int i=0;i<=nums.length;i++){
+			for(int j=i+1;j<=nums.length-1;j++){
+				if(nums[i]+nums[j] == target){
+					System.out.println(nums[i]+" "+nums[j]);
+				}
+			}
+		}
+		
+	}
 }

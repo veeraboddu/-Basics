@@ -5,8 +5,22 @@ public class SeleniumTechFAQ {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		seleniumFAQ();
+		
+		
 	}
 	
+	// we need to pass driver + time + condition (clickable)
+	// it will wait till the element to clicable then execute the event.
+	// if element does not exist timeout exception will through. 
+	public static void explicitWait(WebDriver driver, String str){
+		(new WebDriverWait(driver,10).until(ExpectedConditions.elementToBeClicable(By.linkTest(str))));
+	}
+	
+	//
+	public static void implicitWait(WebDriver driver){
+		
+		driver.manage().timeouts().implicitlyWait(10,TimeUnits.SECONDS)
+	}
 	public static void seleniumFAQ(){
 		/*
 		 
@@ -378,6 +392,10 @@ import org.openqa.selenium.WebElement;
 		}
 	          
 	  Q...  WebDriver Fire Event
+	  
+	  Q. Selenium architecture 
+	  
+	  Selenium Client Library - JSSON Wire protocol over HTTP - brow Driver library - Real Browser 
 	  
 		 
 		 */

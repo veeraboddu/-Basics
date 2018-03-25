@@ -42,3 +42,72 @@ public class BinarySearchTreeTraversal {
 		postOrderTraversal(bst.root);
 	}
 }
+
+
+
+/*
+ 
+ Algorithm for Binary search tree
+ 	1.
+node class
+
+node leftnode;
+node rightnode;
+int value;
+
+constructor for assignment 
+generate setter and getter for left/right/value
+
+----------
+2.
+BST class
+
+Public Node root;
+constructor BST =null
+
+add(node roo, int value) 
+- check root = null then assign value to root.
+- if root != null then
+- check root> value 
+      letf = vaule -> recursion(left,value)
+- check root < value
+      right = value ->recursion(right,value)
+
+
+---------------------
+3. traversal 
+
+bst b1 = new bst();
+b1.add() - elments 25, 20, 35, 10, 22, 30, 40
+     
+          25
+     20        35
+  10    22   30   40
+
+preorder
+- root= NULL - return
+- getData/value
+- preorderTraversal (root.leftnode)
+- preorderTraversal (root.rightnode)
+
+inorder
+- root= NULL - return
+- inorderTraversal (root.leftnode)
+- getData/value
+- inorderTraversal (root.rightnode)
+
+postorder
+- root= NULL - return
+- postorderTraversal (root.leftnode)
+- postorderTraversal (root.rightnode)
+- getData/value 
+ 
+ 7. Methods in stack
+Ans
+   push, pop, delete, sele
+stack - push(),pop(), peek(), search(), empty() - check empty or not, 
+peek() - looks at the object at the top of this stack without remove it. 
+search() - returns the position where an object on the stack.
+
+ 
+ */

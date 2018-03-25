@@ -48,6 +48,19 @@ What are transient variables?
 transient is a Java keyword which marks a member variable not to be serialized when it is persisted to streams of bytes. 
 When an object is transferred through the network, the object needs to be 'serialized'. Serialization converts the object state to serial bytes.
 
+Q. Static - no need to create a instance it exists in perminent memorey
+   // to execute each and every time static block will be used , to initialize the static variable we will use static block
+    static int name ;
+   static {
+    name ="Murty";
+   }
+   
+   // static method 
+    // with out create the instance we can execute the method with class .
+    public static void main (String arg[]){
+    
+    }
+
 		 */
 		
 	}

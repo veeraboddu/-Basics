@@ -5,6 +5,7 @@ public class Node {
 	public Node leftChild;
 	public Node rightChild;
 	private int data;
+	// private Node next;
 	
 	public Node(){
 		leftChild =null;
@@ -14,6 +15,7 @@ public class Node {
 	
 	public Node(int value){
 		leftChild = rightChild =null;
+		//next=null;
 		this.data = value;
 	}
 

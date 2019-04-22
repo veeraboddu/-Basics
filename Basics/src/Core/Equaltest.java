@@ -1,6 +1,6 @@
 package Core;
 
-// EqualTest
+// Equal Test
 public class Equaltest {
 	
 	public static void main(String arg[]){

@@ -8,3 +8,7 @@ Git Commands
 6. git add .  - display non committed files in green
 7. git commit -m 'storyno:comments' - commit the code changes into branch
 8. git push origin <branchName> - Push the code changes into repository
+
+Rest Assured
+
+1. <ProjectName> - > classes > features > src - main ^java>stepDef > util ^resources >data  > pom.xml

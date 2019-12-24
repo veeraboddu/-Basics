@@ -36,4 +36,27 @@ Rest Assured
 			  .then()
 			  .statusCode(200)
 			  .extract()
-			  .response();                
+			  .response();              			  
+4. http methods 
+   - get - used to request the data from a specific source
+   - post - used to send the data to server add /create
+   - put  - update data
+   - delete - to delete the specific data
+   - patch - update the specific data
+   - head
+   - option			              
+
+5. GET - can be cached / remain in browser history / bookmarked / never be used dealing with sensitive data
+         / length restrictions / only used request data
+6. POST - never cached / not remain in the browser history / cannot be book marked / no restrictions on length data       
+Selenium
+
+7 1XX - Informational
+8 2XX - Success
+  200 - ok  201-created 202-accepted  204-No content
+9 3XX - Redirection  
+  304- NotModified
+10 4XX - Client Error
+  400-badrequest 401-unauthorized 403-Forbidden 404-Not found 409-conflict
+11 51xx - Server Error
+  500 - Internal Server error

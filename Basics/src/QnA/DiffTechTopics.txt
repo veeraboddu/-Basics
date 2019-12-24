@@ -12,3 +12,28 @@ Git Commands
 Rest Assured
 
 1. <ProjectName> - > classes > features > src - main ^java>stepDef > util ^resources >data  > pom.xml
+
+    Jsonobject request = {  "userProfileDetails" : {    "gender":"M"   }}   - json format
+    String ApiUrI = "/account-xapi/api/userprofile/user/" + userId;
+    String updateProfileType ="ALL"; - parameter
+    
+2.         Response resp = RestAssured.given().header("content-Type", "application/json")
+                .header("X-Macys-SecurityToken", securedToken)
+                .body(request.toString())
+                .when()
+                .queryParam("updateProfileType", updateProfileType)
+                .put(ApiUrI).then().statusCode(200).extract().response();
+                
+3.   Map<String, Object> json = resp.jsonPath().get();
+	 Map<String, Object> response = (Map<String, Object>) json.get("userProfileResponse");                
+                
+3. RestAssured.given()
+			  .header('content-Type','application/json')
+			  .body(request)
+			  .when()
+			  .queryparam('key','value')
+			  .put(url).
+			  .then()
+			  .statusCode(200)
+			  .extract()
+			  .response();                

@@ -30,8 +30,11 @@ public class TestNGQnA {
 	
 //	Below is the main difference between @Factory and @DataProvider functionalities on TestNG.
 
-	//DataProvider: A test method that uses DataProvider will be executed a multiple number of times based on the data provided by the DataProvider. The test method will be executed using the same instance of the test class to which the test method belongs.
-	//Factory: A factory will execute all the test methods present inside a test class using a separate instance of the respective class.
+	//DataProvider: A test method that uses DataProvider will be executed a multiple number of times based on the data provided by 
+			//the DataProvider. The test method will be executed using the same instance of the test class to which the
+			//test method belongs.
+	//Factory: A factory will execute all the test methods present inside a test class using a separate instance of the respective 
+	           //class.
 	
 	public class DataProviderClass
 	{

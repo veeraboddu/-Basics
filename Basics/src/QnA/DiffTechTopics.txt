@@ -64,7 +64,15 @@ Selenium
 Junit and TESTNG
 -----------------
 Features:
-1. Annotation support, Exception test, Ignore test, timeout test, suite, group, dependent, parameterization
+1. Annotation support,  Yes yes 
+Exception test, yes yes
+Ignore test, yes yes
+timeout test, yes yes 
+suite, yes yes
+group, no (junit), yes
+dependent, no(junit) yes
+parameterization yes yes
+
 Feature	Junit	TestNG
 		
 Test Annotation										Junit		TestNG

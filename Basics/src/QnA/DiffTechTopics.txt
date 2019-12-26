@@ -67,18 +67,18 @@ Features:
 1. Annotation support, Exception test, Ignore test, timeout test, suite, group, dependent, parameterization
 Feature	Junit	TestNG
 		
-Test Annotation										Test	Test
-run before all tests in this suite have run						_	BeforeSuite
-run after all tests in this suite have run						_	Aftersuite
-run before the test									_	BeforeTest
-run after the test									_	AfterTest
-run before the first test method that belongs to any of these groups is invoked		_	BeforeGroups
-run after the last test method that belongs to any of these groups is invoked		_	AfterGroups
+Test Annotation										Junit		TestNG
+run before all tests in this suite have run						_		BeforeSuite
+run after all tests in this suite have run						_		Aftersuite
+run before the test									_		BeforeTest
+run after the test									_		AfterTest
+run before the first test method that belongs to any of these groups is invoked		_		BeforeGroups
+run after the last test method that belongs to any of these groups is invoked		_		AfterGroups
 run before the first test method in the current class invoked				BeforeClass	BeforeClass
 run after the last test method in the current class have been run			AfterClass	AfterClass
 run before each test method								Before		BeforeMethod
-run after easch test method								After	AfterMethod
-ignore Test										ignore	Test(enable=false)
+run after easch test method								After		AfterMethod
+ignore Test										ignore		Test(enable=false)
 expected exception		Test(Expected - ArthimeticException.class)	Test(exceptedException=ArthemeticException.class)
 
 

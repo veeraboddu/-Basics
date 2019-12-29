@@ -1,0 +1,27 @@
+How to write and execute Mobile App Automation script
+Install appium v1.13 and run the appium server
+Install and run the android studio editor to run and execute the mobile app emmiluator (differnet andriod emulator)
+ ex : device pixal etc..
+ write the script
+ // Create object of DesiredCapabilities class
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+	
+ capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10");
+		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 2 API 29");
+		capabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
+		capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
+		capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "");
+		// specify the application package that we copied from appium
+		capabilities.setCapability("appPackage", "io.selendroid.testapp");
+		// specify the application activity that we copied from appium
+		capabilities.setCapability("appActivity", ".HomeScreenActivity");
+		// Start android driver I used 4727 port by default it will be 4723
+		try {
+			driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+      
+      driver.get("https://www.google.com/");
+		driver.findElement(By.name("q")).sendKeys("Automation Veera");
+		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
+    
+    

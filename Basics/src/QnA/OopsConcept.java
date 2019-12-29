@@ -7,7 +7,8 @@ public class OopsConcept {
 
 		/*
 		 
-		   An abstract class can have a constructor(s), but the constructor(s) must be implemented. An Interface must not have a constructor at all.
+		   An abstract class can have a constructor(s), but the constructor(s) must be implemented. 
+		   An Interface must not have a constructor at all.
 		  
 		   Why can't we instantiate abstract class?
 
@@ -46,7 +47,8 @@ class Bar extends Foo
 What are transient variables?
 . What is serialization?
 transient is a Java keyword which marks a member variable not to be serialized when it is persisted to streams of bytes. 
-When an object is transferred through the network, the object needs to be 'serialized'. Serialization converts the object state to serial bytes.
+When an object is transferred through the network, the object needs to be 'serialized'. Serialization converts the object state 
+to serial bytes.
 
 Q. Static - no need to create a instance it exists in perminent memorey
    // to execute each and every time static block will be used , to initialize the static variable we will use static block

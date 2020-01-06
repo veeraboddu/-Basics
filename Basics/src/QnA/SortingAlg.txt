@@ -30,3 +30,17 @@ Space : O(1)
           
 2. Selection Sort
 --------------------
+Based on the idea of finding the minium element in an unsorted array and then putting it in its correct position in a sorted array
+ for(int i=0;i<n-1;i++){
+            min=a[i];
+            for(int j=i+1;j<n-1;j++){
+                if(a[i]>a[j]){
+                    min = a[j];
+                    a[j]= a[i];
+                    a[i]= min;
+                }
+            }
+        }
+Time complexity is poor
+time : O(n^2)
+Space : O(1)        

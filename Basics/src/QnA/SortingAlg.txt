@@ -1,0 +1,10 @@
+Name    TimeComplexity  SpaceComplexity  Stable
+----    --------------  ---------------   -----
+
+Bubble sort     O(n^2)    O(1)  yes
+Selection sort  O(n^2)    O(1)  no
+Insertion sort  O(n^2)    O(1)  yes
+Bucket Sort     O(n logn) O(n)  yes
+Merge Sort      O(n logn) O(n)  yes
+Quick sort      O(n logn) O(n)* No
+Heap sort       O(n logn) O(1)  No

@@ -44,3 +44,9 @@ Based on the idea of finding the minium element in an unsorted array and then pu
 Time complexity is poor
 time : O(n^2)
 Space : O(1)        
+
+3. Insertion Sort  - similar to selection sort
+--------------------
+1. we devide the given array into 2 parts sorted and unsorted
+2. Then form unsorted we pick the first element and find its correct position in sorted array
+3. Repeat till unsorted array is not emply 

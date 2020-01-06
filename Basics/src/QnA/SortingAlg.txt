@@ -1,10 +1,32 @@
-Name    TimeComplexity  SpaceComplexity  Stable
-----    --------------  ---------------   -----
+Name              TimeComplexity  SpaceComplexity  Stable
+----             --------------  ---------------   -----
 
-Bubble sort     O(n^2)    O(1)  yes
-Selection sort  O(n^2)    O(1)  no
-Insertion sort  O(n^2)    O(1)  yes
-Bucket Sort     O(n logn) O(n)  yes
-Merge Sort      O(n logn) O(n)  yes
-Quick sort      O(n logn) O(n)* No
-Heap sort       O(n logn) O(1)  No
+Bubble sort       O(n^2)    O(1)  yes
+Selection sort    O(n^2)    O(1)  no
+Insertion sort    O(n^2)    O(1)  yes
+Bucket Sort       O(n logn) O(n)  yes
+Merge Sort        O(n logn) O(n)  yes
+Quick sort        O(n logn) O(n)* No
+Heap sort         O(n logn) O(1)  No
+
+Bubble Sort :
+-------------
+Compare each pair of adjacent items and swap them if they are in wrong order, repeatedly stepds through the list to be sorted
+
+a [] =30 10 50 20 60 40 
+n = a.lenth();
+for (int i=0;i<n-1;i++)
+  for (int j=0;j<n-1-i;j++)
+       if(a[j] > a[j+1])
+          swap (a[j],a[j+1)
+          team = a[j];
+          a[j] = a[j+1]
+          a[j+1] = temp;
+    
+When to use : When input is already sorted, space is concern, easy to implement
+Time complexity is poor
+time : O(n^2)
+Space : O(1)
+          
+2. Selection Sort
+--------------------

@@ -63,7 +63,65 @@ Q. Static - no need to create a instance it exists in perminent memorey
     
     }
 
-		 */
+1. Abstract 
+- Abstract class not possible to create an instance
+- Abstract class will have abstract method and not abstract methods
+- In order to use an abstract method, you need to override that method in sub class. (abstract void myMethod();)
+
+// Here class is abstract
+public abstract class AbstractSuperClass {
+	// data members cant be abstract
+	public int a = 10;
+	
+	// myMethod() is an abstract method
+	abstract void myMethod();
+	
+	// myMethod(int x) is not an abstract method. Its a concrete method
+	void myMethod(int x){
+		System.out.println("I am in Super class and I am not an abstract method. I am a concrete method");
+	}
+
+}
+
+// Inheriting the AbstractSuperClass class
+public class AbstractChildOneClass extends AbstractSuperClass{
+
+	public static void main (String [] args){
+
+                // Here we cannot instantiate the AbstractSuperClass class but we can instantiate the AbstractChildClass class
+                // Using the instance of AbstractChildClass we can access methods and data members of AbstractSuperClass class
+	
+		AbstractSuperClass obj = new AbstractChildOneClass();
+		
+		System.out.println("I am a data member from Super class and my value is " + obj.a);
+		obj.myMethod();
+		obj.myMethod(20);
+		
+	}
+
+	@Override
+	void myMethod() {
+
+		System.out.println("I am in child class");
+		
+	}
+
+Output:
+I am a data member from Super class and my value is 10
+I am in child class
+I am in Super class and I am not an abstract method. I am a concrete method
+
+2. INTERFACE
+Basic statement we all know in Selenium is WebDriver driver = new FirefoxDriver();
+
+WebDriver is an interface , FirefoxDriver is a class which is entented from the WebDirver class. 
+
+3. 
+
+
+
+
+*/
 		
 	}
 

@@ -116,7 +116,16 @@ Basic statement we all know in Selenium is WebDriver driver = new FirefoxDriver(
 
 WebDriver is an interface , FirefoxDriver is a class which is entented from the WebDirver class. 
 
-3. 
+3. Inheritance
+Inheritance is a process where one class inherits the properties of another class.
+In inheritance, we use two keywords namely extends and implements
+
+4. polymorphism
+Combination of overloading and overriding is known as Polymorphism. We will see both overloading and overriding below.
+Polymorphism allows us to perform a task in multiple ways.
+
+5. Encapsulation
+Encapsulation is a mechanism of binding code and data together in a single unit. (data members and member functions into a single unit)
 
 
 

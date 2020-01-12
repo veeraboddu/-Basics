@@ -25,3 +25,19 @@
  Instance means server config (basic computer) it contain - CPU, physical memory, ram, network connection, firewall (security), Os
  - EC2 Amazon EC2, good for any type of processing activity
  
+ Common AWS architecture diagram
+ 
+ AWS
+ AWS - S3, VPC
+ VPC - EC2, RDS 
+
+VPC - Virtual private cloud is your private section of aws, where you can place aws resources, and allow/resist access to them.
+example - Facebook 
+         - Your Home page , My Homepage (all friend/friend's posts), Friends's Homepage (individual )
+         - you can restrict 'your home page' ie - photos, posts, video's to specific group of people
+         
+         - AWS
+         - Your VPC, My VPC, Friends VPC
+         - your vpc contains aws EC2, asw RDS
+         
+         

@@ -1,0 +1,27 @@
+1. AWS Cloud
+- Common Enterprise uses of cloud services 
+- software Company will maintain there won services dependens up the capacity ex: users 1000 - 2 servers - in 2017, 
+                                                                              ex: users 2000 - 4 servers - in 2018,
+                                                                              ex: users 8000 - 8 servers - in 2019,
+ Disadtangates : maintenance, new servers , config, instance and time etc..
+ But in Cloud it maintain all the servers in short period of time. First access from any where. 
+ Advantages :
+ 1. High availability - all the time, any device that we want, 
+ 2. Fault Tolerant - harddrive crash, computer down, backup what ever bad happen we can access our files
+ 3. Scalability - quickly grow and shrink on demand
+ 4. Elasticity -  quickly grow and shrink on demand
+ 
+ AWS - contains
+ - Amazon S3 (Storage) - mass storage, long term storage
+ - Amazon EC2 (Computer power) - Web hosting
+ - Amazon RDS (Database) - customer info, Inventory catalog
+ - VPC's - 
+ 
+ Ex : Facebook, Netflix users the aws services
+ 
+ What is EC2 ?
+ Think of EC2 as a virtual computer that can be used what ever you want.
+ Cloud Terminology we calleds as - Instance
+ Instance means server config (basic computer) it contain - CPU, physical memory, ram, network connection, firewall (security), Os
+ - EC2 Amazon EC2, good for any type of processing activity
+ 

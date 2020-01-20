@@ -1,0 +1,7 @@
+1. 2nd max salary
+SELECT name, salary
+FROM employee A
+WHERE n-1 = (SELECT count(1) 
+             FROM employee B 
+             WHERE B.salary>A.salary)
+            

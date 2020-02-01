@@ -1,0 +1,9 @@
+
+1. STS (Spring Tool Suite)tool used to develop the spring boot frame work
+2. Annotations which are used to implement the spring framework. 
+3. create spring project http://start.spring.io  (choosed - new spring starter project)
+4. Spring container will take care of creating the instanaces of objects
+5. @component - declare at the class level, spring container while instanstaite object will be created with out 'new' keyword
+6. @Autowired - ClassA, ClassB, - if classB declared in ClassA. spring container will take care to create the instance but to
+                known the ClassA/connected between two objects @autowired annotation will be used. 
+7. @Qualifier - used to identify the class under @autowired / you can declare your won class name ie : @Qualifier("myclassB")                

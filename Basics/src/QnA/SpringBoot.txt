@@ -3,7 +3,16 @@
 2. Annotations which are used to implement the spring framework. 
 3. create spring project http://start.spring.io  (choosed - new spring starter project)
 4. Spring container will take care of creating the instanaces of objects
+- standalone application
 5. @component - declare at the class level, spring container while instanstaite object will be created with out 'new' keyword
 6. @Autowired - ClassA, ClassB, - if classB declared in ClassA. spring container will take care to create the instance but to
                 known the ClassA/connected between two objects @autowired annotation will be used. 
-7. @Qualifier - used to identify the class under @autowired / you can declare your won class name ie : @Qualifier("myclassB")                
+7. @Qualifier - used to identify the class under @autowired / you can declare your won class name ie : @Qualifier("myclassB")
+- Web application
+8. Create a Spring boot web application - annotation support
+9. MVC - structure format - @Controller annotation used for controller class
+   - we need to create src - main - webapp - jsp pages need to create
+   @RequestMapping("home") - home page is a jsp page  - if you want to redirect, you have to mention - retrun "home.jsp" 
+10. if you want to mention return type as .jsp, .velocity .js etc.. need to mention at application.properties file
+11. spring.mvc.view.prefix =/pages/
+12. spring.mvc.view.suffix=.jsp

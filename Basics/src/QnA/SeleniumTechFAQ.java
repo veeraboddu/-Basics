@@ -397,6 +397,12 @@ import org.openqa.selenium.WebElement;
 	  
 	  Selenium Client Library - JSSON Wire protocol over HTTP - brow Driver library - Real Browser 
 	  
+	  
+	  cucumber annotations
+	  --------------------
+	  @RunWith(Cucumber.class)
+@CucumberOptions(features="<path of feature file>", 
+glue="<path of step defs class>",format = {"pretty", "html:target/Destination"})
 		 
 		 */
 		

@@ -1,7 +1,9 @@
 1. 2nd max salary
 SELECT name, salary
 FROM employee A
-WHERE n-1 = (SELECT count(1) 
+WHERE n-1 = (SELECT count(distinct(salary)) 
              FROM employee B 
              WHERE B.salary>A.salary)
             
+2. 2nd highest sal
+select max(sal) from emp where sal !=(select max(sal) from emp)

@@ -41,3 +41,8 @@ example - Facebook
          - your vpc contains aws EC2, asw RDS
          
          
+What is Spark?
+Spark is a computation intensive algorithem over the cluster. 
+Means: Analyse the big data over the cluster and gives the output . Note: we can't analyse the big data on a single machine.
+Cluster Means - Network of machines.
+

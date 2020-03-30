@@ -8,6 +8,8 @@ WHERE n-1 = (SELECT count(distinct(salary))
 2. 2nd highest sal
 select max(sal) from emp where sal !=(select max(sal) from emp)
 
+SELECT distinct Salary from worker a WHERE 3 >= (SELECT count(distinct Salary) from worker b WHERE a.Salary <= b.Salary) order by a.Salary desc;
+
 https://www.techbeamers.com/sql-query-questions-answers-for-practice/
 
 Tables

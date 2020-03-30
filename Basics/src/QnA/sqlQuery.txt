@@ -7,3 +7,96 @@ WHERE n-1 = (SELECT count(distinct(salary))
             
 2. 2nd highest sal
 select max(sal) from emp where sal !=(select max(sal) from emp)
+
+https://www.techbeamers.com/sql-query-questions-answers-for-practice/
+
+Tables
+Worker
+WORKER_ID	  FIRST_NAME	LAST_NAME	    SALARY	    JOINING_DATE	DEPARTMENT
+001	        Monika	    Arora     	100000	2014-02-20 09:00:00 	   HR
+002	        Niharika	  Verma	      80000	  2014-06-11 09:00:00	     Admin
+003	        Vishal	    Singhal   	300000	2014-02-20 09:00:00   	HR
+004	        Amitabh	    Singh	    500000	2014-02-20 09:00:00	    Admin
+005	        Vivek	      Bhati	    500000	2014-06-11 09:00:00   	Admin
+006	        Vipul	      Diwan	    200000	2014-06-11 09:00:00	    Account
+
+Bonus
+WORKER_REF_ID	BONUS_DATE	BONUS_AMOUNT
+1	            2016-02-20 00:00:00	5000
+2	            2016-06-11 00:00:00	3000
+
+Title
+WORKER_REF_ID	WORKER_TITLE	AFFECTED_FROM
+1	            Manager	      2016-02-20 00:00:00
+2	            Executive	    2016-06-11 00:00:00
+
+Q. Write sql query first_name from Worker table using the alias name as worker_Name
+A. Select First_name as Worker_Name from worker;
+
+Q. upper case First_name
+A. Select upper(first_name) from worker;
+
+Q. unique value of department from worker and lenght
+A. select distinct department form worker, 
+Select distinct length(DEPARTMENT) from Worker;
+
+
+Q. first 3 char 
+A. select substring(first_name, 1,3) from worker;
+
+Q. remove white space 
+A. select ltrim(first_name) from worker  / RTRIM /LTRIM
+
+Q. Replace a to A
+Select REPLACE(FIRST_NAME,'a','A') from Worker;
+
+Q. concatenate
+   Select CONCAT(FIRST_NAME, ' ', LAST_NAME) AS 'COMPLETE_NAME' from Worker;
+Q. Ascending order
+   Select * from Worker order by FIRST_NAME asc;
+   Select * from Worker order by FIRST_NAME asc,DEPARTMENT desc;
+Q. Workers with the first name as “Vipul” and “Satish”
+a. Select * from Worker where FIRST_NAME in ('Vipul','Satish');
+Select * from Worker where FIRST_NAME not in ('Vipul','Satish');
+
+q. print details of Workers with DEPARTMENT name as “Admin”.
+A. Select * from Worker where DEPARTMENT like 'Admin%';
+
+Q. print details of the Workers whose FIRST_NAME contains ‘a’
+A. Select * from Worker where FIRST_NAME like '%a%';
+
+Q Workers whose SALARY lies between 100000 and 500000.
+a. Select * from Worker where SALARY between 100000 and 500000;
+
+q. print details of the Workers who have joined in Feb’2014.
+Select * from Worker where year(JOINING_DATE) = 2014 and month(JOINING_DATE) = 2;
+
+q. count of employees working in the department ‘Admin’.
+A. SELECT COUNT(*) FROM worker WHERE DEPARTMENT = 'Admin';
+
+q.Write an SQL query to fetch worker names with salaries >= 50000 and <= 100000.
+
+A. SELECT CONCAT(FIRST_NAME, ' ', LAST_NAME) As Worker_Name, Salary
+FROM worker 
+WHERE WORKER_ID IN 
+(SELECT WORKER_ID FROM worker 
+WHERE Salary BETWEEN 50000 AND 100000);
+
+q. fetch the no. of workers for each department in the descending order.
+A. SELECT DEPARTMENT, count(WORKER_ID) No_Of_Workers 
+FROM worker 
+GROUP BY DEPARTMENT 
+ORDER BY No_Of_Workers DESC;
+
+Q. query to print details of the Workers who are also Managers
+A. SELECT DISTINCT W.FIRST_NAME, T.WORKER_TITLE
+FROM Worker W
+INNER JOIN Title T
+ON W.WORKER_ID = T.WORKER_REF_ID
+AND T.WORKER_TITLE in ('Manager');
+
+Q. duplicate
+A. SELECT WORKER_TITLE, AFFECTED_FROM, COUNT(*)
+FROM Title
+GROUP BY WORKER_TITLE, AFFECTED_FROM
+HAVING COUNT(*) > 1;

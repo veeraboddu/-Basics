@@ -1,0 +1,17 @@
+1. git clone <repositorypath>  -- Clone the repository code to loacal
+2. git checkout -b <"branchName"> - create branch
+3. git pull - to pull latest code from repository
+4. git checkout <branchName> - change branch
+5. git status - display status non commited files shows in red font
+6. git add .  - display non committed files in green
+7. git commit -m 'storyno:comments' - commit the code changes into branch
+8. git push origin <branchName> - Push the code changes into repository
+
+Some of the basic commands in linumx
+ls, ls -la  - list  all the files in the folder
+cd, cd ..  - change the directory moving the directory
+vi <filename>- editor to update the files content
+Cat - To display the content
+Grep <text > - to search the content 
+cp <source> <desti> - copy the file
+mv <soruce> <dest> - move the 

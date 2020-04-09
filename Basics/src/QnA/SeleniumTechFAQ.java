@@ -26,7 +26,8 @@ public class SeleniumTechFAQ {
 		 
 		 locators
 		    - ID,xpath, name, byClassName, css, selector, byTagName, linkTest, partiallLinkTest
-		    id, name, linkText, partialLinkText, tagName, cssSelector, classname, Xpath
+		    id, name, link
+		    , partialLinkText, tagName, cssSelector, classname, Xpath
 
 
 id
@@ -356,6 +357,8 @@ import org.openqa.selenium.WebElement;
 	 links
 	//a[text()='Help' and @class='tab prox-b']
 	//a[contains(text(),'Features')]
+	 //*[text()='Daily Face Cover (Pack of 10)' and @class='a-size-base-plus a-color-base a-text-normal']
+	 
 	 
 	 Button
 	//button[text()='Sign Up']

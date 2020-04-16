@@ -127,7 +127,14 @@ Polymorphism allows us to perform a task in multiple ways.
 5. Encapsulation
 Encapsulation is a mechanism of binding code and data together in a single unit. (data members and member functions into a single unit)
 
-
+Java 8 Features
+Lambda Expressions
+Default Methods
+Date and Time API
+Streams
+forEach() Method
+Type Annotations
+Repeating Annotations
 
 
 */

@@ -188,5 +188,29 @@ ISuiteListener
 ITestListener
 *******************************************************************
 
+Difference between softassertion and hard assertion 
+
+Softassertion : will execute the send of statements of the the assert condition success/faile. 
+hardassertion : Will terminate the execution after assertion is failue/false
+
+class SoftHardAssertion{
+@Test
+public void softAsset(){
+	SoftAssert ast = new SoftAssert();
+	sop("test1 start");
+	ast.assertEquals(12,13);
+	sop("test1 start");  // this statement will be executed
+	ass.assertAll(); // if we keep assertAll then only soft assert will be exectued. 
+}
+
+@Test
+public void harAsset(){
+	sop("test1 start");
+	Assert.assertEquals(12,13); // testNG
+	sop("test1 start");   // it will not be executed
+}
+
+}
+
 	} */
 }

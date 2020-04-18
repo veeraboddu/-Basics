@@ -42,9 +42,28 @@ Service Oriented architecture (SOA) Testing methods.
 
 Supports multiple protocols – SOAP, REST, HTTP, JMS, AMF, JDBC
 
-
-
 Web Services :
 Web services are independent application components, which are available over the web.
 They can be published, found and can be used on the web. They can communicate through the internet.
 
+Spring boot:
+new - starter project - name(service) - add dependancy - 
+-service register (server)
+-feign (declarative web service client )
+-zuul (intelligent routing system)
+- Rest repository (expose JPA repository )
+- web - (Spring mvp with embadded tomcat)
+- Hystrix - (circuit breaker cascading)
+-lombok - to reduce bioler plate code
+application.perperties - you can change configure properties like port, application name etc. 
+application_cloud.properties
+- service files (src) - it contails all the java service files
+appropriate annotations
+@EnableFeignclient
+@EnableCircuitbreaker
+@EnableDiscoveryclient
+
+- controller files 
+Microservice application - Divide the application into small applications and connect them through REST services.
+Ex: customer domain , Discover, selection, Starreward, checkout, credit , order history
+monolathic application - singleStone application

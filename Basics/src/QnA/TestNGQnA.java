@@ -121,6 +121,12 @@ public class TestNGQnA {
 		    @Test(group ="grpname"}
 		    @Test(enabled=false)
 		    
+		    // example if you have @Test(priority =1) m1(){sop(1)}
+		     @Test(priority =0) m2(){sop(2)}
+		      @Test(priority =-1) m3(){sop(3)}
+		      // least number will take the least priority ie : -1, 0, 1 will be executed
+		      // ie m3() - first, m2() - second , m1() - third. 
+		    
 		    
 		    Junit annotaionts
 		    @Test

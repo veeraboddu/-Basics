@@ -16,3 +16,35 @@
 10. if you want to mention return type as .jsp, .velocity .js etc.. need to mention at application.properties file
 11. spring.mvc.view.prefix =/pages/
 12. spring.mvc.view.suffix=.jsp
+
+
+What is SOA Testing?  / REST services / RESTFUL Servcies
+SOA (Service Oriented Architecture) Testing is a Testing of SOA architectural style in which the application components are designed to communicate via communication protocols typically over a network.
+- SOA is a method of integrating business applications and processes together so as to meet the business needs.
+Service requester (E-commerce site)   <-> Service provider (payment Gateway)
+-SOA consists of various technologies. Applications built using SOA has various services which are loosely coupled.
+
+SOA Testing should focus on 3 system layers
+1. Services Layer / business layer - services exposed by a system derived from business functions. output / resultm- tracker service
+2. Process Layer / controller -  collection of services which are part of a single functionality. / tracker  
+3. Consumer Layer - website 
+
+Service Oriented architecture (SOA) Testing methods. 
+1. Business scenario driven data based testing
+2. Regression testing
+3. Service level testing
+4. Functional testing
+5. Security testing
+6. preformance testing. 
+7. Integration level testing.
+8. End to End testing
+9. Mock up service testing
+
+Supports multiple protocols – SOAP, REST, HTTP, JMS, AMF, JDBC
+
+
+
+Web Services :
+Web services are independent application components, which are available over the web.
+They can be published, found and can be used on the web. They can communicate through the internet.
+

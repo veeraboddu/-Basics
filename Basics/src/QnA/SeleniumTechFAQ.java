@@ -236,6 +236,7 @@ xpath
 		    - NoSuchFrameException
 		    - TimeoutException
 		    - Element not visible at this point.
+		    - staleException
 		    
 		 Q. Window alert can not handle by using selenium But javascript/web based alert can handle
 		    

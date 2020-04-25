@@ -39,6 +39,20 @@ Rest Assured
 			  .statusCode(200)
 			  .extract()
 			  .response();              			  
+			  
+ Example : Authentication
+ 
+ child class
+ int code = RestAssured.given()
+            .auth().preemptive()               // we can remove these 2 lines if we extents below base class 
+	    .basic("UserName","Password")
+	    .when()
+	    .get("http://uri")
+	    .getStatusCode();
+ 
+ baseclass:
+ RestAssured.authentication = RestAssured.preemptive().basic("username","pwd");
+ 
 4. http methods 
    - get - used to request the data from a specific source
    - post - used to send the data to server add /create

@@ -41,7 +41,7 @@ Rest Assured
 			  .response();              			  
 			  
  Example : Authentication
- 
+ 1.
  child class
  int code = RestAssured.given()
             .auth().preemptive()               // we can remove these 2 lines if we extents below base class 
@@ -52,6 +52,30 @@ Rest Assured
  
  baseclass:
  RestAssured.authentication = RestAssured.preemptive().basic("username","pwd");
+ RestAssured.baseURI = "uri";
+ 
+ 2.  Authorization (Oauth)
+ 
+ public class OauthExample {
+
+	@Test
+	public void Oauth() {
+
+		Response resp = (Response) RestAssured.given().auth().oauth(" ", " ", " ", " ").post();
+		System.out.println(resp.getStatusCode());
+		System.out.println(resp.getBody().jsonPath().prettify());
+	}
+}
+ 
+Key and tokens
+1. Consumer API keys 
+api key - xxxxxxxxxxxxxxx
+api secreate key -yyyyyyuyyyyyyyyyy
+ 
+ 2. Access token and access token secret
+ - access token
+ - access token secret
+ 
  
 4. http methods 
    - get - used to request the data from a specific source

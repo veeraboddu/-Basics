@@ -79,8 +79,11 @@ String st = resp.jsonPath().get("access_token"));
 // step 2
 		Response resp = (Response) RestAssured.given().auth().oauth2(token).post();
 
-
-
+// Jsessionid is a cookie in j2ee web application which is used in session tracking
+Response resp = (Response) RestAssured.given().auth().oauth2(" ").post();
+		System.out.println(resp.getStatusCode());
+		System.out.println(resp.getBody().jsonPath().prettify());
+    String sessionID = resp.getCookies().get("JSESSIONID");
  
 Key and tokens
 1. Consumer API keys 

@@ -70,6 +70,18 @@ rest assured build on top of httpclient framework
 	}
 }
  
+ // to get the token 	for oauth2()	
+ 
+ Response resp = (Response) RestAssured.given().formParam("client_id "," ")
+                 .formparam("client_secret","")
+		 .post("url");
+String st = resp.jsonPath().get("access_token"));
+// step 2
+		Response resp = (Response) RestAssured.given().auth().oauth2(token).post();
+
+
+
+ 
 Key and tokens
 1. Consumer API keys 
 api key - xxxxxxxxxxxxxxx

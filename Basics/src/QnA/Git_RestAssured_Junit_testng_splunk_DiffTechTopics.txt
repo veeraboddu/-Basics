@@ -12,6 +12,7 @@ Git Commands
 
 Rest Assured
 -------------
+rest assured build on top of httpclient framework
 
 1. <ProjectName> - > classes > features > src - main ^java>stepDef > util ^resources >data  > pom.xml
 
@@ -41,12 +42,12 @@ Rest Assured
 			  .response();              			  
 			  
  Example : Authentication
- 1.
+ 1.  basic authentication. - preemptive(sent credentials in header format)  - challenge(when server ask then only it pass the creadentials)
  child class
  int code = RestAssured.given()
             .auth().preemptive()               // we can remove these 2 lines if we extents below base class 
-	    .basic("UserName","Password")
-	    .when()
+	    .basic("UserName","Password")     // 1. .auth.preemptive().base("un ","pw ")
+	    .when()                            // 2. .auth.basic(" un ","pw")
 	    .get("http://uri")
 	    .getStatusCode();
  
@@ -54,14 +55,16 @@ Rest Assured
  RestAssured.authentication = RestAssured.preemptive().basic("username","pwd");
  RestAssured.baseURI = "uri";
  
- 2.  Authorization (Oauth)
- 
+ 2.  Authorization (Oauth)  (oauth(),oauth2())
+ oauth - restassured, scribejava dependency required
+   
  public class OauthExample {
 
 	@Test
 	public void Oauth() {
 
 		Response resp = (Response) RestAssured.given().auth().oauth(" ", " ", " ", " ").post();
+		Response resp = (Response) RestAssured.given().auth().oauth2(" ").post();
 		System.out.println(resp.getStatusCode());
 		System.out.println(resp.getBody().jsonPath().prettify());
 	}

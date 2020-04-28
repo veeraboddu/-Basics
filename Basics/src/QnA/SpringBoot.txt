@@ -63,6 +63,14 @@ appropriate annotations
 @EnableCircuitbreaker
 @EnableDiscoveryclient
 
+- Features of Spring boot
+1. create standalone applciations
+2. Embed tomcat (no need to deploy war files)
+3. provide starter POMs to simplify your maven configuration
+4. automatically configure spring whenever it required. 
+5. production ready features such as metrics, health checkup, externalized configure
+6. no code generation and no requirement for xml.
+
 - controller files 
 Microservice application - Divide the application into small applications and connect them through REST services.
 Ex: customer domain , Discover, selection, Starreward, checkout, credit , order history

@@ -404,6 +404,29 @@ import org.openqa.selenium.WebElement;
 
 	 driver.findElement(By.xpath(" copy/paste xpath  ")).click();
 	 
+	 // Reading elemnts in datatable 
+	
+	 //a[contains(text(),'Bank of India')]/parent::*/following-sibling::td[3]
+		 
+/*
+tr - table row
+td - table data / table column
+
+find the total number of row
+List<WebElement> rows = driver.findElements(By.xpath("//table[@id='name']/tbody/tr"))
+
+String beforexpath =" //*[@id='customers']/tbody/tr[";
+String afterxpath = "]td[1]";
+
+for(int i=1;i<rows;i++){
+String actualxpath = beforexpath + afterxpath ;
+WebElement element = driver.findElement(By.xpath(actualXpath));
+System.out.println(element.getText());
+
+}
+
+driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+	 
 	 
 	 Q.. Action class useage
 		public Helppage helpLink(){

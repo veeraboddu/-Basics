@@ -94,6 +94,18 @@ api secreate key -yyyyyyuyyyyyyyyyy
  - access token
  - access token secret
  
+ *** Authorization Services****
+ 1. Authorization code flow  - client(user) -> photo booth app ->  google oauth server 
+                                 google oauth server -> user permission
+				 photo booth app - access to google content server
+2. Implict flow - - client(user) -> photo booth app ->  google oauth server 
+                                 google oauth server -> user permission
+				 google oauth server share token to - photo booth app 
+				 photo booth app - access to google content server by using token
+3. Client Credential flow   - when the client is well trusted (confidential client ) 
+                            - Microservices communication betweeen two services. 
+                              
+ 
  
 4. http methods 
    - get - used to request the data from a specific source

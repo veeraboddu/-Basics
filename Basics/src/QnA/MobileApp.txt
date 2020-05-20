@@ -1,12 +1,18 @@
 Appium installation step by step process window and 
 https://www.youtube.com/watch?v=x-hBpgM5je8&list=PLhW3qG5bs-L8npSSZD6aWdYFQ96OEduhk&index=3
 https://www.youtube.com/watch?v=BEF-d1xjV4Q&list=PLhW3qG5bs-L8npSSZD6aWdYFQ96OEduhk&index=4
-1. download install node js, node -v, npm -v
-2. install appium -> npm install -g appium
+1. download install node js, -- to check install or not::   node -v, npm -v, where npm, where node
+2. install appium -> npm install -g appium   --- To check appium intall or not: appium -v, where appium
 3. install appium desktop
 4. install appium doctor -> npm install appium-doctor -g
-5. for help/option to health checkup  -> appium-doctor -h
+5. for help/option to health checkup  -> appium-doctor -h, appium-doctor -version, appium-doctor --version, 
+    appium-doctor --ios, appium-doctor --andriod  --------- it will help what need to configured 
+6  - To start type - appium  - ctrl +c to stop the appium server
+7   To install appium desktop client - download and intall
+   - we can use any one appium through cmd prompt or appium desktop cient
 
+to uninstall -- npm uninstall -g appium 
+ 
 6. download android sdk zip file and unzip 
 7. go to sdk bin/ execute below cmd - sdkmanager "platform-tools" "platforms;android-28"
 8. 'platform' and 'platform tool' will be downloaded to the sdk folder

@@ -15,7 +15,12 @@ to uninstall -- npm uninstall -g appium
  
 6. download android sdk zip file and unzip 
 7. go to sdk bin/ execute below cmd - sdkmanager "platform-tools" "platforms;android-28"
-8. 'platform' and 'platform tool' will be downloaded to the sdk folder
+8. 'platform' and 'platform tool' will be downloaded to the sdk folder  (once execute sdkmanager platform folder will be displayed)
+9. set the environment variables
+ ANDROID_HOME = location of android_sdk folder
+ path : append the path of platform-tools folder
+10. to check sdkmanger configured and platform-tools executed correctly or not
+go to cmd prompt type : adp devices o/p: list of devices attached
 
 Learning
 https://www.youtube.com/playlist?list=PLhW3qG5bs-L8npSSZD6aWdYFQ96OEduhk

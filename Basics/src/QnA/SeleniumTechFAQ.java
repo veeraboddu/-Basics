@@ -73,7 +73,7 @@ xpath
 		WebDriver wd= new ChromeDriver();
 		wd.get("https://www.facebook.com/");
 		wd.findElement(By.id("email")).sendKeys("sunitha.paraselli20@gmail.com");
-		wd.findElement(By.id("pass")).sendKeys("mummysisterdad123");
+		wd.findElement(By.id("pass")).sendKeys("mummysis3");
 		wd.findElement(By.id("u_0_o")).click();
 	}
 		 

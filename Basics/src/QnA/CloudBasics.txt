@@ -46,3 +46,11 @@ Spark is a computation intensive algorithem over the cluster.
 Means: Analyse the big data over the cluster and gives the output . Note: we can't analyse the big data on a single machine.
 Cluster Means - Network of machines.
 
+
+latest message view on kafka console
+https://kafka.apache.org/quickstart
+
+go to folder kafka/bin :
+./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test_topic --from-beginning
+
+
